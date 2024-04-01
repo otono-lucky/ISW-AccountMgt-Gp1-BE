@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "90BzSQqx0DlD8deNfNDdM6ofB65ewBpglYbC/or2VqY=",
+  "Source": "AccountMgt.Api",
+  "BasePath": "_content/AccountMgt.Api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
