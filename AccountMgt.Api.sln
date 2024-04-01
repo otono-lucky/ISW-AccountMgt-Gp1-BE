@@ -13,7 +13,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AccountMgt.Utility", "Accou
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AccountMgt.Auth", "AccountMgt.Auth\AccountMgt.Auth.csproj", "{A849A19E-DE02-4DA9-ADAF-2DC5B727E4DC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AccountMgt.Core", "AccountMgt.Core\AccountMgt.Core.csproj", "{4C7B87D6-1808-463D-92FC-CA4AA937C063}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AccountMgt.Core", "AccountMgt.Core\AccountMgt.Core.csproj", "{4C7B87D6-1808-463D-92FC-CA4AA937C063}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{2CADC1A1-27FA-472B-96C6-23E596A5E147}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
