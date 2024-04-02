@@ -244,8 +244,8 @@ paket-files/
 .idea/
 *.sln.iml
 
-appsettings.json
-appsettings.Development.json
+#appsettings.json
+#appsettings.Development.json
 #appsettings.json
 #TicketEase/*.txt
 /AccountMgt.Api/appsettings.Development.json
