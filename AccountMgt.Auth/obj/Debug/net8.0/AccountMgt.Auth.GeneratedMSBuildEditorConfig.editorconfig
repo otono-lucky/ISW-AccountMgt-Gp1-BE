@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = AccountMgt.Auth
-build_property.ProjectDir = C:\Users\Decagon\source\repos\AccountMgt.Api\AccountMgt.Auth\
+build_property.ProjectDir = C:\Users\ADMIN\Desktop\ISW-Grp1\ISW-AccountMgt-Gp1-BE\AccountMgt.Auth\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
