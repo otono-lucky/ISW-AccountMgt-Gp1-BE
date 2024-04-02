@@ -249,3 +249,5 @@ paket-files/
 #appsettings.json
 #TicketEase/*.txt
 /AccountMgt.Api/appsettings.Development.json
+#hsdbfjsbdf
+/.vs/AccountMgt.Api/v17/.suo
