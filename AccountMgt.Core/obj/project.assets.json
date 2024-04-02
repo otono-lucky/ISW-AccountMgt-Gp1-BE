@@ -14,9 +14,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ADMIN\\Desktop\\ISW-Grp1\\ISW-AccountMgt-Gp1-BE\\AccountMgt.Core\\AccountMgt.Core.csproj",
-      "projectName": "AccountMgt.Core",
-      "projectPath": "C:\\Users\\ADMIN\\Desktop\\ISW-Grp1\\ISW-AccountMgt-Gp1-BE\\AccountMgt.Core\\AccountMgt.Core.csproj",
+      "projectUniqueName": "C:\\Users\\ADMIN\\Desktop\\ISW-Grp1\\ISW-AccountMgt-Gp1-BE\\AccountMgt.Core\\AccountMgt.Domain.csproj",
+      "projectName": "AccountMgt.Domain",
+      "projectPath": "C:\\Users\\ADMIN\\Desktop\\ISW-Grp1\\ISW-AccountMgt-Gp1-BE\\AccountMgt.Core\\AccountMgt.Domain.csproj",
       "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\ADMIN\\Desktop\\ISW-Grp1\\ISW-AccountMgt-Gp1-BE\\AccountMgt.Core\\obj\\",
       "projectStyle": "PackageReference",

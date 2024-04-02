@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "eKWUBYE9gqjrBEgTY8fnpC/fxH9vzBp6yMEfAV/qHF0eeYI4iRQTeltcTzaIAya5/k0gVfpKeexsV9JBh095VQ==",
+  "dgSpecHash": "UxNdK36K9Ho2HlbeFCJTh4wTEl4/7AZSOe3XKQ3Wpy8eax0Zx0ujZTcRLTIb+RPNYszLRWRdKHd2DQR8uTEilA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ADMIN\\Desktop\\ISW-Grp1\\ISW-AccountMgt-Gp1-BE\\AccountMgt.Core\\AccountMgt.Core.csproj",
+  "projectFilePath": "C:\\Users\\ADMIN\\Desktop\\ISW-Grp1\\ISW-AccountMgt-Gp1-BE\\AccountMgt.Core\\AccountMgt.Domain.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
