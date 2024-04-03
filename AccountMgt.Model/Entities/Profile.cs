@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace AccountMgt.Model.Entities
 {
-    internal class Profile
+    public class Profile : BaseEntity
     {
+
     }
 }
