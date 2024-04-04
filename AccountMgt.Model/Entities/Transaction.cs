@@ -13,6 +13,6 @@ namespace AccountMgt.Model.Entities
         public DateTime TransactionDate { get; set; }
         public string Description { get; set; }
         public string ProfileId { get; set; }
-        public Profile Profile { get; set; }
+        public virtual Profile Profile { get; set; }
     }
 }
