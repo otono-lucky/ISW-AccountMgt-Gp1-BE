@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Decagon\\Desktop\\ISW-AccountMgt-Gp1-BE\\AccountMgt.Data\\AccountMgt.Data.csproj": {}
+    "C:\\Users\\Decagon\\Documents\\ISW-AccountMgt-Gp1-BE\\AccountMgt.Data\\AccountMgt.Data.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Decagon\\Desktop\\ISW-AccountMgt-Gp1-BE\\AccountMgt.Data\\AccountMgt.Data.csproj": {
+    "C:\\Users\\Decagon\\Documents\\ISW-AccountMgt-Gp1-BE\\AccountMgt.Data\\AccountMgt.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Decagon\\Desktop\\ISW-AccountMgt-Gp1-BE\\AccountMgt.Data\\AccountMgt.Data.csproj",
+        "projectUniqueName": "C:\\Users\\Decagon\\Documents\\ISW-AccountMgt-Gp1-BE\\AccountMgt.Data\\AccountMgt.Data.csproj",
         "projectName": "AccountMgt.Data",
-        "projectPath": "C:\\Users\\Decagon\\Desktop\\ISW-AccountMgt-Gp1-BE\\AccountMgt.Data\\AccountMgt.Data.csproj",
+        "projectPath": "C:\\Users\\Decagon\\Documents\\ISW-AccountMgt-Gp1-BE\\AccountMgt.Data\\AccountMgt.Data.csproj",
         "packagesPath": "C:\\Users\\Decagon\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Decagon\\Desktop\\ISW-AccountMgt-Gp1-BE\\AccountMgt.Data\\obj\\",
+        "outputPath": "C:\\Users\\Decagon\\Documents\\ISW-AccountMgt-Gp1-BE\\AccountMgt.Data\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Decagon\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,8 +28,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\Decagon\\Desktop\\ISW-AccountMgt-Gp1-BE\\AccountMgt.Model\\AccountMgt.Model.csproj": {
-                "projectPath": "C:\\Users\\Decagon\\Desktop\\ISW-AccountMgt-Gp1-BE\\AccountMgt.Model\\AccountMgt.Model.csproj"
+              "C:\\Users\\Decagon\\Documents\\ISW-AccountMgt-Gp1-BE\\AccountMgt.Model\\AccountMgt.Model.csproj": {
+                "projectPath": "C:\\Users\\Decagon\\Documents\\ISW-AccountMgt-Gp1-BE\\AccountMgt.Model\\AccountMgt.Model.csproj"
               }
             }
           }
@@ -121,14 +121,14 @@
         }
       }
     },
-    "C:\\Users\\Decagon\\Desktop\\ISW-AccountMgt-Gp1-BE\\AccountMgt.Model\\AccountMgt.Model.csproj": {
+    "C:\\Users\\Decagon\\Documents\\ISW-AccountMgt-Gp1-BE\\AccountMgt.Model\\AccountMgt.Model.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Decagon\\Desktop\\ISW-AccountMgt-Gp1-BE\\AccountMgt.Model\\AccountMgt.Model.csproj",
+        "projectUniqueName": "C:\\Users\\Decagon\\Documents\\ISW-AccountMgt-Gp1-BE\\AccountMgt.Model\\AccountMgt.Model.csproj",
         "projectName": "AccountMgt.Model",
-        "projectPath": "C:\\Users\\Decagon\\Desktop\\ISW-AccountMgt-Gp1-BE\\AccountMgt.Model\\AccountMgt.Model.csproj",
+        "projectPath": "C:\\Users\\Decagon\\Documents\\ISW-AccountMgt-Gp1-BE\\AccountMgt.Model\\AccountMgt.Model.csproj",
         "packagesPath": "C:\\Users\\Decagon\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Decagon\\Desktop\\ISW-AccountMgt-Gp1-BE\\AccountMgt.Model\\obj\\",
+        "outputPath": "C:\\Users\\Decagon\\Documents\\ISW-AccountMgt-Gp1-BE\\AccountMgt.Model\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Decagon\\AppData\\Roaming\\NuGet\\NuGet.Config",
