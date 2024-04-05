@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Decagon\\Desktop\\ISW-AccountMgt-Gp1-BE\\AccountMgt.Api\\AccountMgt.Api.csproj": {}
+    "C:\\Users\\Decagon\\Documents\\ISW-AccountMgt-Gp1-BE\\AccountMgt.Api\\AccountMgt.Api.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Decagon\\Desktop\\ISW-AccountMgt-Gp1-BE\\AccountMgt.Api\\AccountMgt.Api.csproj": {
+    "C:\\Users\\Decagon\\Documents\\ISW-AccountMgt-Gp1-BE\\AccountMgt.Api\\AccountMgt.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Decagon\\Desktop\\ISW-AccountMgt-Gp1-BE\\AccountMgt.Api\\AccountMgt.Api.csproj",
+        "projectUniqueName": "C:\\Users\\Decagon\\Documents\\ISW-AccountMgt-Gp1-BE\\AccountMgt.Api\\AccountMgt.Api.csproj",
         "projectName": "AccountMgt.Api",
-        "projectPath": "C:\\Users\\Decagon\\Desktop\\ISW-AccountMgt-Gp1-BE\\AccountMgt.Api\\AccountMgt.Api.csproj",
+        "projectPath": "C:\\Users\\Decagon\\Documents\\ISW-AccountMgt-Gp1-BE\\AccountMgt.Api\\AccountMgt.Api.csproj",
         "packagesPath": "C:\\Users\\Decagon\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Decagon\\Desktop\\ISW-AccountMgt-Gp1-BE\\AccountMgt.Api\\obj\\",
+        "outputPath": "C:\\Users\\Decagon\\Documents\\ISW-AccountMgt-Gp1-BE\\AccountMgt.Api\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Decagon\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,20 +28,20 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\Decagon\\Desktop\\ISW-AccountMgt-Gp1-BE\\AccountMgt.Auth\\AccountMgt.Auth.csproj": {
-                "projectPath": "C:\\Users\\Decagon\\Desktop\\ISW-AccountMgt-Gp1-BE\\AccountMgt.Auth\\AccountMgt.Auth.csproj"
+              "C:\\Users\\Decagon\\Documents\\ISW-AccountMgt-Gp1-BE\\AccountMgt.Auth\\AccountMgt.Auth.csproj": {
+                "projectPath": "C:\\Users\\Decagon\\Documents\\ISW-AccountMgt-Gp1-BE\\AccountMgt.Auth\\AccountMgt.Auth.csproj"
               },
-              "C:\\Users\\Decagon\\Desktop\\ISW-AccountMgt-Gp1-BE\\AccountMgt.Core\\AccountMgt.Core.csproj": {
-                "projectPath": "C:\\Users\\Decagon\\Desktop\\ISW-AccountMgt-Gp1-BE\\AccountMgt.Core\\AccountMgt.Core.csproj"
+              "C:\\Users\\Decagon\\Documents\\ISW-AccountMgt-Gp1-BE\\AccountMgt.Core\\AccountMgt.Core.csproj": {
+                "projectPath": "C:\\Users\\Decagon\\Documents\\ISW-AccountMgt-Gp1-BE\\AccountMgt.Core\\AccountMgt.Core.csproj"
               },
-              "C:\\Users\\Decagon\\Desktop\\ISW-AccountMgt-Gp1-BE\\AccountMgt.Data\\AccountMgt.Data.csproj": {
-                "projectPath": "C:\\Users\\Decagon\\Desktop\\ISW-AccountMgt-Gp1-BE\\AccountMgt.Data\\AccountMgt.Data.csproj"
+              "C:\\Users\\Decagon\\Documents\\ISW-AccountMgt-Gp1-BE\\AccountMgt.Data\\AccountMgt.Data.csproj": {
+                "projectPath": "C:\\Users\\Decagon\\Documents\\ISW-AccountMgt-Gp1-BE\\AccountMgt.Data\\AccountMgt.Data.csproj"
               },
-              "C:\\Users\\Decagon\\Desktop\\ISW-AccountMgt-Gp1-BE\\AccountMgt.Model\\AccountMgt.Model.csproj": {
-                "projectPath": "C:\\Users\\Decagon\\Desktop\\ISW-AccountMgt-Gp1-BE\\AccountMgt.Model\\AccountMgt.Model.csproj"
+              "C:\\Users\\Decagon\\Documents\\ISW-AccountMgt-Gp1-BE\\AccountMgt.Model\\AccountMgt.Model.csproj": {
+                "projectPath": "C:\\Users\\Decagon\\Documents\\ISW-AccountMgt-Gp1-BE\\AccountMgt.Model\\AccountMgt.Model.csproj"
               },
-              "C:\\Users\\Decagon\\Desktop\\ISW-AccountMgt-Gp1-BE\\AccountMgt.Utility\\AccountMgt.Utility.csproj": {
-                "projectPath": "C:\\Users\\Decagon\\Desktop\\ISW-AccountMgt-Gp1-BE\\AccountMgt.Utility\\AccountMgt.Utility.csproj"
+              "C:\\Users\\Decagon\\Documents\\ISW-AccountMgt-Gp1-BE\\AccountMgt.Utility\\AccountMgt.Utility.csproj": {
+                "projectPath": "C:\\Users\\Decagon\\Documents\\ISW-AccountMgt-Gp1-BE\\AccountMgt.Utility\\AccountMgt.Utility.csproj"
               }
             }
           }
@@ -59,6 +59,10 @@
             "CloudinaryDotNet": {
               "target": "Package",
               "version": "[1.26.2, )"
+            },
+            "MailKit": {
+              "target": "Package",
+              "version": "[4.4.0, )"
             },
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
@@ -120,14 +124,14 @@
         }
       }
     },
-    "C:\\Users\\Decagon\\Desktop\\ISW-AccountMgt-Gp1-BE\\AccountMgt.Auth\\AccountMgt.Auth.csproj": {
+    "C:\\Users\\Decagon\\Documents\\ISW-AccountMgt-Gp1-BE\\AccountMgt.Auth\\AccountMgt.Auth.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Decagon\\Desktop\\ISW-AccountMgt-Gp1-BE\\AccountMgt.Auth\\AccountMgt.Auth.csproj",
+        "projectUniqueName": "C:\\Users\\Decagon\\Documents\\ISW-AccountMgt-Gp1-BE\\AccountMgt.Auth\\AccountMgt.Auth.csproj",
         "projectName": "AccountMgt.Auth",
-        "projectPath": "C:\\Users\\Decagon\\Desktop\\ISW-AccountMgt-Gp1-BE\\AccountMgt.Auth\\AccountMgt.Auth.csproj",
+        "projectPath": "C:\\Users\\Decagon\\Documents\\ISW-AccountMgt-Gp1-BE\\AccountMgt.Auth\\AccountMgt.Auth.csproj",
         "packagesPath": "C:\\Users\\Decagon\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Decagon\\Desktop\\ISW-AccountMgt-Gp1-BE\\AccountMgt.Auth\\obj\\",
+        "outputPath": "C:\\Users\\Decagon\\Documents\\ISW-AccountMgt-Gp1-BE\\AccountMgt.Auth\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Decagon\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -144,8 +148,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\Decagon\\Desktop\\ISW-AccountMgt-Gp1-BE\\AccountMgt.Model\\AccountMgt.Model.csproj": {
-                "projectPath": "C:\\Users\\Decagon\\Desktop\\ISW-AccountMgt-Gp1-BE\\AccountMgt.Model\\AccountMgt.Model.csproj"
+              "C:\\Users\\Decagon\\Documents\\ISW-AccountMgt-Gp1-BE\\AccountMgt.Model\\AccountMgt.Model.csproj": {
+                "projectPath": "C:\\Users\\Decagon\\Documents\\ISW-AccountMgt-Gp1-BE\\AccountMgt.Model\\AccountMgt.Model.csproj"
               }
             }
           }
@@ -163,6 +167,10 @@
             "CloudinaryDotNet": {
               "target": "Package",
               "version": "[1.26.2, )"
+            },
+            "MailKit": {
+              "target": "Package",
+              "version": "[4.4.0, )"
             },
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
@@ -197,14 +205,14 @@
         }
       }
     },
-    "C:\\Users\\Decagon\\Desktop\\ISW-AccountMgt-Gp1-BE\\AccountMgt.Core\\AccountMgt.Core.csproj": {
+    "C:\\Users\\Decagon\\Documents\\ISW-AccountMgt-Gp1-BE\\AccountMgt.Core\\AccountMgt.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Decagon\\Desktop\\ISW-AccountMgt-Gp1-BE\\AccountMgt.Core\\AccountMgt.Core.csproj",
+        "projectUniqueName": "C:\\Users\\Decagon\\Documents\\ISW-AccountMgt-Gp1-BE\\AccountMgt.Core\\AccountMgt.Core.csproj",
         "projectName": "AccountMgt.Core",
-        "projectPath": "C:\\Users\\Decagon\\Desktop\\ISW-AccountMgt-Gp1-BE\\AccountMgt.Core\\AccountMgt.Core.csproj",
+        "projectPath": "C:\\Users\\Decagon\\Documents\\ISW-AccountMgt-Gp1-BE\\AccountMgt.Core\\AccountMgt.Core.csproj",
         "packagesPath": "C:\\Users\\Decagon\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Decagon\\Desktop\\ISW-AccountMgt-Gp1-BE\\AccountMgt.Core\\obj\\",
+        "outputPath": "C:\\Users\\Decagon\\Documents\\ISW-AccountMgt-Gp1-BE\\AccountMgt.Core\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Decagon\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -236,6 +244,10 @@
             "CloudinaryDotNet": {
               "target": "Package",
               "version": "[1.26.2, )"
+            },
+            "MailKit": {
+              "target": "Package",
+              "version": "[4.4.0, )"
             },
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
@@ -290,14 +302,14 @@
         }
       }
     },
-    "C:\\Users\\Decagon\\Desktop\\ISW-AccountMgt-Gp1-BE\\AccountMgt.Data\\AccountMgt.Data.csproj": {
+    "C:\\Users\\Decagon\\Documents\\ISW-AccountMgt-Gp1-BE\\AccountMgt.Data\\AccountMgt.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Decagon\\Desktop\\ISW-AccountMgt-Gp1-BE\\AccountMgt.Data\\AccountMgt.Data.csproj",
+        "projectUniqueName": "C:\\Users\\Decagon\\Documents\\ISW-AccountMgt-Gp1-BE\\AccountMgt.Data\\AccountMgt.Data.csproj",
         "projectName": "AccountMgt.Data",
-        "projectPath": "C:\\Users\\Decagon\\Desktop\\ISW-AccountMgt-Gp1-BE\\AccountMgt.Data\\AccountMgt.Data.csproj",
+        "projectPath": "C:\\Users\\Decagon\\Documents\\ISW-AccountMgt-Gp1-BE\\AccountMgt.Data\\AccountMgt.Data.csproj",
         "packagesPath": "C:\\Users\\Decagon\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Decagon\\Desktop\\ISW-AccountMgt-Gp1-BE\\AccountMgt.Data\\obj\\",
+        "outputPath": "C:\\Users\\Decagon\\Documents\\ISW-AccountMgt-Gp1-BE\\AccountMgt.Data\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Decagon\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -314,8 +326,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\Decagon\\Desktop\\ISW-AccountMgt-Gp1-BE\\AccountMgt.Model\\AccountMgt.Model.csproj": {
-                "projectPath": "C:\\Users\\Decagon\\Desktop\\ISW-AccountMgt-Gp1-BE\\AccountMgt.Model\\AccountMgt.Model.csproj"
+              "C:\\Users\\Decagon\\Documents\\ISW-AccountMgt-Gp1-BE\\AccountMgt.Model\\AccountMgt.Model.csproj": {
+                "projectPath": "C:\\Users\\Decagon\\Documents\\ISW-AccountMgt-Gp1-BE\\AccountMgt.Model\\AccountMgt.Model.csproj"
               }
             }
           }
@@ -334,6 +346,10 @@
               "target": "Package",
               "version": "[1.26.2, )"
             },
+            "MailKit": {
+              "target": "Package",
+              "version": "[4.4.0, )"
+            },
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
               "version": "[8.0.3, )"
@@ -387,14 +403,14 @@
         }
       }
     },
-    "C:\\Users\\Decagon\\Desktop\\ISW-AccountMgt-Gp1-BE\\AccountMgt.Model\\AccountMgt.Model.csproj": {
+    "C:\\Users\\Decagon\\Documents\\ISW-AccountMgt-Gp1-BE\\AccountMgt.Model\\AccountMgt.Model.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Decagon\\Desktop\\ISW-AccountMgt-Gp1-BE\\AccountMgt.Model\\AccountMgt.Model.csproj",
+        "projectUniqueName": "C:\\Users\\Decagon\\Documents\\ISW-AccountMgt-Gp1-BE\\AccountMgt.Model\\AccountMgt.Model.csproj",
         "projectName": "AccountMgt.Model",
-        "projectPath": "C:\\Users\\Decagon\\Desktop\\ISW-AccountMgt-Gp1-BE\\AccountMgt.Model\\AccountMgt.Model.csproj",
+        "projectPath": "C:\\Users\\Decagon\\Documents\\ISW-AccountMgt-Gp1-BE\\AccountMgt.Model\\AccountMgt.Model.csproj",
         "packagesPath": "C:\\Users\\Decagon\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Decagon\\Desktop\\ISW-AccountMgt-Gp1-BE\\AccountMgt.Model\\obj\\",
+        "outputPath": "C:\\Users\\Decagon\\Documents\\ISW-AccountMgt-Gp1-BE\\AccountMgt.Model\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Decagon\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -426,6 +442,10 @@
             "CloudinaryDotNet": {
               "target": "Package",
               "version": "[1.26.2, )"
+            },
+            "MailKit": {
+              "target": "Package",
+              "version": "[4.4.0, )"
             },
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
@@ -480,14 +500,14 @@
         }
       }
     },
-    "C:\\Users\\Decagon\\Desktop\\ISW-AccountMgt-Gp1-BE\\AccountMgt.Utility\\AccountMgt.Utility.csproj": {
+    "C:\\Users\\Decagon\\Documents\\ISW-AccountMgt-Gp1-BE\\AccountMgt.Utility\\AccountMgt.Utility.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Decagon\\Desktop\\ISW-AccountMgt-Gp1-BE\\AccountMgt.Utility\\AccountMgt.Utility.csproj",
+        "projectUniqueName": "C:\\Users\\Decagon\\Documents\\ISW-AccountMgt-Gp1-BE\\AccountMgt.Utility\\AccountMgt.Utility.csproj",
         "projectName": "AccountMgt.Utility",
-        "projectPath": "C:\\Users\\Decagon\\Desktop\\ISW-AccountMgt-Gp1-BE\\AccountMgt.Utility\\AccountMgt.Utility.csproj",
+        "projectPath": "C:\\Users\\Decagon\\Documents\\ISW-AccountMgt-Gp1-BE\\AccountMgt.Utility\\AccountMgt.Utility.csproj",
         "packagesPath": "C:\\Users\\Decagon\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Decagon\\Desktop\\ISW-AccountMgt-Gp1-BE\\AccountMgt.Utility\\obj\\",
+        "outputPath": "C:\\Users\\Decagon\\Documents\\ISW-AccountMgt-Gp1-BE\\AccountMgt.Utility\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Decagon\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -503,7 +523,11 @@
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\Decagon\\Documents\\ISW-AccountMgt-Gp1-BE\\AccountMgt.Data\\AccountMgt.Data.csproj": {
+                "projectPath": "C:\\Users\\Decagon\\Documents\\ISW-AccountMgt-Gp1-BE\\AccountMgt.Data\\AccountMgt.Data.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -519,6 +543,10 @@
             "CloudinaryDotNet": {
               "target": "Package",
               "version": "[1.26.2, )"
+            },
+            "MailKit": {
+              "target": "Package",
+              "version": "[4.4.0, )"
             },
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
