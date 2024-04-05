@@ -31,10 +31,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\AccountMgt.Auth\AccountMgt.Auth.csproj" />
     <ProjectReference Include="..\AccountMgt.Core\AccountMgt.Core.csproj" />
     <ProjectReference Include="..\AccountMgt.Data\AccountMgt.Data.csproj" />
