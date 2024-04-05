@@ -1,4 +1,5 @@
 
+using AccountMgt.Api.Configuration;
 using AccountMgt.Data;
 using AccountMgt.Model.Entities;
 using AccountMgt.Utility.CloudinaryService;
@@ -6,6 +7,9 @@ using AccountMgt.Utility.Email;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
+
+//using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using System.Text;
@@ -34,6 +38,8 @@ namespace AccountMgt.Api
                     ValidateAudience = false
                 };
             });
+
+            builder.Services.AddLoggingConfiguration(builder.Configuration);
 
             //Adding Documention
             builder.Services.AddSwaggerGen(c =>
@@ -86,9 +92,19 @@ namespace AccountMgt.Api
 
             builder.Services.AddScoped<IEmailService, EmailService>();
 
-            var app = builder.Build();
+            builder.Services.AddCors(options =>
+            {
+                options.AddPolicy("AllowAllOrigins", builder =>
+                {
+                    builder.WithOrigins("http://localhost:3000")
+                        .AllowAnyHeader()
+                        .AllowAnyMethod()
+                        .AllowCredentials();
+                });
+            });
 
-           
+            var app = builder.Build();
+            app.UseCors("AllowAllOrigins");
 
             // Configure the HTTP request pipeline.
             if (app.Environment.IsDevelopment())
@@ -109,6 +125,8 @@ namespace AccountMgt.Api
             var roleManager = serviceProvider.GetRequiredService<RoleManager<IdentityRole>>();
 
             Seeder.SeedData(context, userManager, roleManager).Wait();
+
+            app.UseCors("AllowAllOrigins");
 
             app.MapControllers();
 
