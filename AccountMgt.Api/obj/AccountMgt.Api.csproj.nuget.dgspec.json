@@ -60,6 +60,10 @@
               "target": "Package",
               "version": "[1.26.2, )"
             },
+            "MailKit": {
+              "target": "Package",
+              "version": "[4.4.0, )"
+            },
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
               "version": "[8.0.3, )"
@@ -164,6 +168,10 @@
               "target": "Package",
               "version": "[1.26.2, )"
             },
+            "MailKit": {
+              "target": "Package",
+              "version": "[4.4.0, )"
+            },
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
               "version": "[8.0.3, )"
@@ -236,6 +244,10 @@
             "CloudinaryDotNet": {
               "target": "Package",
               "version": "[1.26.2, )"
+            },
+            "MailKit": {
+              "target": "Package",
+              "version": "[4.4.0, )"
             },
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
@@ -334,6 +346,10 @@
               "target": "Package",
               "version": "[1.26.2, )"
             },
+            "MailKit": {
+              "target": "Package",
+              "version": "[4.4.0, )"
+            },
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
               "version": "[8.0.3, )"
@@ -427,6 +443,10 @@
               "target": "Package",
               "version": "[1.26.2, )"
             },
+            "MailKit": {
+              "target": "Package",
+              "version": "[4.4.0, )"
+            },
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
               "version": "[8.0.3, )"
@@ -503,7 +523,11 @@
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\Decagon\\Documents\\ISW-AccountMgt-Gp1-BE\\AccountMgt.Data\\AccountMgt.Data.csproj": {
+                "projectPath": "C:\\Users\\Decagon\\Documents\\ISW-AccountMgt-Gp1-BE\\AccountMgt.Data\\AccountMgt.Data.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -519,6 +543,10 @@
             "CloudinaryDotNet": {
               "target": "Package",
               "version": "[1.26.2, )"
+            },
+            "MailKit": {
+              "target": "Package",
+              "version": "[4.4.0, )"
             },
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",

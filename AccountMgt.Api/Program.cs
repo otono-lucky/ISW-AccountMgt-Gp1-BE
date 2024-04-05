@@ -2,6 +2,7 @@
 using AccountMgt.Data;
 using AccountMgt.Model.Entities;
 using AccountMgt.Utility.CloudinaryService;
+using AccountMgt.Utility.Email;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -82,6 +83,8 @@ namespace AccountMgt.Api
             {
                 options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection"));
             });
+
+            builder.Services.AddScoped<IEmailService, EmailService>();
 
             var app = builder.Build();
 
