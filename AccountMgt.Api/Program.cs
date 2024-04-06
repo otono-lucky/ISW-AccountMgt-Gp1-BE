@@ -1,6 +1,11 @@
 
 using AccountMgt.Api.Configuration;
+using AccountMgt.Auth;
+using AccountMgt.Core.IServices;
+using AccountMgt.Core.Services;
 using AccountMgt.Data;
+using AccountMgt.Data.IRepository;
+using AccountMgt.Data.Repository;
 using AccountMgt.Model.Entities;
 using AccountMgt.Utility.CloudinaryService;
 using AccountMgt.Utility.Email;
@@ -91,6 +96,9 @@ namespace AccountMgt.Api
             });
 
             builder.Services.AddScoped<IEmailService, EmailService>();
+            builder.Services.AddScoped<IUserRepository, UserRepository>();
+            builder.Services.AddScoped<IUserServices, UserServices>();
+           
 
             builder.Services.AddCors(options =>
             {

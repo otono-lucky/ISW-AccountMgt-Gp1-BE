@@ -260,7 +260,11 @@
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\Decagon\\Desktop\\ISW-AccountMgt-Gp1-BE\\AccountMgt.Data\\AccountMgt.Data.csproj": {
+                "projectPath": "C:\\Users\\Decagon\\Desktop\\ISW-AccountMgt-Gp1-BE\\AccountMgt.Data\\AccountMgt.Data.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -374,8 +378,14 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
+              "C:\\Users\\Decagon\\Desktop\\ISW-AccountMgt-Gp1-BE\\AccountMgt.Auth\\AccountMgt.Auth.csproj": {
+                "projectPath": "C:\\Users\\Decagon\\Desktop\\ISW-AccountMgt-Gp1-BE\\AccountMgt.Auth\\AccountMgt.Auth.csproj"
+              },
               "C:\\Users\\Decagon\\Desktop\\ISW-AccountMgt-Gp1-BE\\AccountMgt.Model\\AccountMgt.Model.csproj": {
                 "projectPath": "C:\\Users\\Decagon\\Desktop\\ISW-AccountMgt-Gp1-BE\\AccountMgt.Model\\AccountMgt.Model.csproj"
+              },
+              "C:\\Users\\Decagon\\Desktop\\ISW-AccountMgt-Gp1-BE\\AccountMgt.Utility\\AccountMgt.Utility.csproj": {
+                "projectPath": "C:\\Users\\Decagon\\Desktop\\ISW-AccountMgt-Gp1-BE\\AccountMgt.Utility\\AccountMgt.Utility.csproj"
               }
             }
           }
@@ -604,8 +614,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\Decagon\\Desktop\\ISW-AccountMgt-Gp1-BE\\AccountMgt.Data\\AccountMgt.Data.csproj": {
-                "projectPath": "C:\\Users\\Decagon\\Desktop\\ISW-AccountMgt-Gp1-BE\\AccountMgt.Data\\AccountMgt.Data.csproj"
+              "C:\\Users\\Decagon\\Desktop\\ISW-AccountMgt-Gp1-BE\\AccountMgt.Model\\AccountMgt.Model.csproj": {
+                "projectPath": "C:\\Users\\Decagon\\Desktop\\ISW-AccountMgt-Gp1-BE\\AccountMgt.Model\\AccountMgt.Model.csproj"
               }
             }
           }

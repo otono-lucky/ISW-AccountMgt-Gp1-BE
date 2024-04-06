@@ -19,11 +19,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\AccountMgt.Data\AccountMgt.Data.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Templates\" />
+    <ProjectReference Include="..\AccountMgt.Model\AccountMgt.Model.csproj" />
   </ItemGroup>
 
 </Project>

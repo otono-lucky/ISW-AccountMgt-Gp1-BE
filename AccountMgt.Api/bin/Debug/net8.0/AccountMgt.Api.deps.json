@@ -1522,6 +1522,7 @@
       },
       "AccountMgt.Core/1.0.0": {
         "dependencies": {
+          "AccountMgt.Data": "1.0.0",
           "CloudinaryDotNet": "1.26.2",
           "MailKit": "4.4.0",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "8.0.3",
@@ -1540,7 +1541,9 @@
       },
       "AccountMgt.Data/1.0.0": {
         "dependencies": {
+          "AccountMgt.Auth": "1.0.0",
           "AccountMgt.Model": "1.0.0",
+          "AccountMgt.Utility": "1.0.0",
           "CloudinaryDotNet": "1.26.2",
           "MailKit": "4.4.0",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "8.0.3",
@@ -1577,7 +1580,7 @@
       },
       "AccountMgt.Utility/1.0.0": {
         "dependencies": {
-          "AccountMgt.Data": "1.0.0",
+          "AccountMgt.Model": "1.0.0",
           "CloudinaryDotNet": "1.26.2",
           "MailKit": "4.4.0",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "8.0.3",
