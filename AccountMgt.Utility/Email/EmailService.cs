@@ -1,4 +1,4 @@
-﻿using AccountMgt.Data.DTO;
+﻿using AccountMgt.Model.DTO;
 using MailKit.Security;
 using Microsoft.Extensions.Configuration;
 using MimeKit;
@@ -37,7 +37,7 @@ namespace AccountMgt.Utility.Email
 
             using var smtp = new SmtpClient();
 
-            smtp.Connect(_config["EmailSettings:SmtpHost"], int.Parse(_config["EmailSettings:SmtpPort"]), SecureSocketOptions.StartTls);
+            smtp.Connect(_config["EmailSettings:SmtpHost"], int.Parse(_config["EmailSettings:SmtpPort"]), SecureSocketOptions.SslOnConnect);
             smtp.Authenticate(_config["EmailSettings:SmtpUsername"], _config["EmailSettings:SmtpPassword"]);
 
             await smtp.SendAsync(email);
@@ -55,7 +55,7 @@ namespace AccountMgt.Utility.Email
             }
 
             body = body.Replace("{UserName}", UserName);
-            body = body.Replace("{Otp}", Otp);
+            body = body.Replace("{otp}", Otp);
             return body;
         }
     }
