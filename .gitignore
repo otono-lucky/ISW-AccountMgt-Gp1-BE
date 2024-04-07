@@ -258,9 +258,9 @@ paket-files/
 /AccountMgt.Model/bin
 /AccountMgt.Utility/bin
 
-/AccountMgt.Api/obj
-/AccountMgt.Auth/obj
-/AccountMgt.Core/obj
-/AccountMgt.Data/obj
-/AccountMgt.Model/obj
-/AccountMgt.Utility/obj
+AccountMgt.Api/obj/Debug/net8.0
+AccountMgt.Auth/obj/Debug/net8.0
+AccountMgt.Data/obj/Debug/net8.0
+AccountMgt.Model/obj/Debug/net8.0
+AccountMgt.Utility/obj/Debug/net8.0
+AccountMgt.Core/obj/Debug/net8.0
