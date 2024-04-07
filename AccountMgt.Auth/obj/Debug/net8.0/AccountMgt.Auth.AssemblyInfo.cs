@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AccountMgt.Auth")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+efb570db5411391df6b8bfcbc01298c9c8422065")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b95e90026c1e8c34d2348836d77ceacd83bba8e3")]
 [assembly: System.Reflection.AssemblyProductAttribute("AccountMgt.Auth")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AccountMgt.Auth")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

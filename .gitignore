@@ -257,3 +257,10 @@ paket-files/
 /AccountMgt.Data/bin
 /AccountMgt.Model/bin
 /AccountMgt.Utility/bin
+
+/AccountMgt.Api/obj
+/AccountMgt.Auth/obj
+/AccountMgt.Core/obj
+/AccountMgt.Data/obj
+/AccountMgt.Model/obj
+/AccountMgt.Utility/obj
