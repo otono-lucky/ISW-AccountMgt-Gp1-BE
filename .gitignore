@@ -251,3 +251,9 @@ paket-files/
 /AccountMgt.Api/appsettings.Development.json
 #hsdbfjsbdf
 /.vs/AccountMgt.Api/v17/.suo
+/AccountMgt.Api/bin
+/AccountMgt.Auth/bin
+/AccountMgt.Core/bin
+/AccountMgt.Data/bin
+/AccountMgt.Model/bin
+/AccountMgt.Utility/bin

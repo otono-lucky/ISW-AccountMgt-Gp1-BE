@@ -98,7 +98,8 @@ namespace AccountMgt.Api
             builder.Services.AddScoped<IEmailService, EmailService>();
             builder.Services.AddScoped<IUserRepository, UserRepository>();
             builder.Services.AddScoped<IUserServices, UserServices>();
-           
+            builder.Services.AddScoped<ITokenGenerator, TokenGenerator>();
+
 
             builder.Services.AddCors(options =>
             {

@@ -26,5 +26,15 @@ namespace AccountMgt.Core.Services
             }
             return "No user added";
         }
+
+        public async Task<string> Login(LoginDto loginDto)
+        {
+            var token = await _userRepository.Login(loginDto);
+            if (token != null)
+            {
+                return token;
+            }
+            return "Something went wrong";
+        }
     }
 }

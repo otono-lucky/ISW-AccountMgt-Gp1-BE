@@ -2,6 +2,7 @@
 using MailKit.Security;
 using Microsoft.Extensions.Configuration;
 using MimeKit;
+using Org.BouncyCastle.Asn1.Ocsp;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -56,6 +57,40 @@ namespace AccountMgt.Utility.Email
 
             body = body.Replace("{UserName}", UserName);
             body = body.Replace("{otp}", Otp);
+            return body;
+        }
+
+        public async Task SendLockoutNotificationAsync(EmailDto request)
+        {
+            var body = PopulateLockedOutNotification();
+            var email = new MimeMessage();
+
+            email.From.Add(MailboxAddress.Parse(_config["EmailSettings:SmtpUsername"]));
+            email.To.Add(MailboxAddress.Parse(request.To));
+            email.Subject = request.Subject;
+            /*email.Body = new TextPart(TextFormat.Html) { Text = request.Body };*/
+            var builder = new BodyBuilder();
+            builder.HtmlBody = body;
+
+            email.Body = builder.ToMessageBody();
+
+            using var smtp = new SmtpClient();
+
+            smtp.Connect(_config["EmailSettings:SmtpHost"], int.Parse(_config["EmailSettings:SmtpPort"]), SecureSocketOptions.SslOnConnect);
+            smtp.Authenticate(_config["EmailSettings:SmtpUsername"], _config["EmailSettings:SmtpPassword"]);
+
+            await smtp.SendAsync(email);
+            smtp.Disconnect(true);
+        }
+        private string PopulateLockedOutNotification()
+        {
+            string body = string.Empty;
+            string filePath = Directory.GetCurrentDirectory() + @"\Templates\LockedOutNotification.html";
+
+            using (StreamReader reader = new StreamReader(filePath))
+            {
+                body = reader.ReadToEnd();
+            }
             return body;
         }
     }

@@ -15,9 +15,15 @@ namespace AccountMgt.Api.Controllers
             _userServices = userServices;
         }
         [HttpPost("add-user")]
-        public async Task<IActionResult> CreateUser(RegisterDto request)
+        public async Task<IActionResult> CreateUser([FromBody] RegisterDto request)
         {
             return Ok(await _userServices.CreateUserService(request));
+        }
+
+        [HttpPost("login")]
+        public async Task<IActionResult> Login([FromBody] LoginDto loginDto)
+        {
+            return Ok(await _userServices.Login(loginDto));
         }
     }
 }

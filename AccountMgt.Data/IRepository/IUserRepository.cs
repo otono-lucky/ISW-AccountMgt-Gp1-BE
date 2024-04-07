@@ -10,5 +10,6 @@ namespace AccountMgt.Data.IRepository
     public interface IUserRepository
     {
         Task<string> RegisterUser(RegisterDto request);
+        Task<string> Login(LoginDto loginDto);
     }
 }

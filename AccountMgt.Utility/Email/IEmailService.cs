@@ -10,5 +10,6 @@ namespace AccountMgt.Utility.Email
     public interface IEmailService
     {
         Task SendEmailRegistration(EmailDto request);
+        Task SendLockoutNotificationAsync(EmailDto request);
     }
 }
