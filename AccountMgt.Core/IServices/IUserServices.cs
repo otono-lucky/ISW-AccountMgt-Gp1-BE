@@ -10,5 +10,6 @@ namespace AccountMgt.Core.IServices
     public interface IUserServices
     {
         Task<string> CreateUserService(RegisterDto request);
+        Task<string> Login(LoginDto loginDto);
     }
 }

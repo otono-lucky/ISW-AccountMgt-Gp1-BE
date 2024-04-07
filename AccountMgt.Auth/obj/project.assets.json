@@ -6264,11 +6264,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Decagon\\Desktop\\ISW-AccountMgt-Gp1-BE\\AccountMgt.Auth\\AccountMgt.Auth.csproj",
+      "projectUniqueName": "C:\\Users\\Decagon\\Documents\\ISW-AccountMgt-Gp1-BE\\AccountMgt.Auth\\AccountMgt.Auth.csproj",
       "projectName": "AccountMgt.Auth",
-      "projectPath": "C:\\Users\\Decagon\\Desktop\\ISW-AccountMgt-Gp1-BE\\AccountMgt.Auth\\AccountMgt.Auth.csproj",
+      "projectPath": "C:\\Users\\Decagon\\Documents\\ISW-AccountMgt-Gp1-BE\\AccountMgt.Auth\\AccountMgt.Auth.csproj",
       "packagesPath": "C:\\Users\\Decagon\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Decagon\\Desktop\\ISW-AccountMgt-Gp1-BE\\AccountMgt.Auth\\obj\\",
+      "outputPath": "C:\\Users\\Decagon\\Documents\\ISW-AccountMgt-Gp1-BE\\AccountMgt.Auth\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Decagon\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -6285,8 +6285,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\Decagon\\Desktop\\ISW-AccountMgt-Gp1-BE\\AccountMgt.Model\\AccountMgt.Model.csproj": {
-              "projectPath": "C:\\Users\\Decagon\\Desktop\\ISW-AccountMgt-Gp1-BE\\AccountMgt.Model\\AccountMgt.Model.csproj"
+            "C:\\Users\\Decagon\\Documents\\ISW-AccountMgt-Gp1-BE\\AccountMgt.Model\\AccountMgt.Model.csproj": {
+              "projectPath": "C:\\Users\\Decagon\\Documents\\ISW-AccountMgt-Gp1-BE\\AccountMgt.Model\\AccountMgt.Model.csproj"
             }
           }
         }

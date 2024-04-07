@@ -350,3 +350,12 @@ C:\Users\Decagon\Desktop\ISW-AccountMgt-Gp1-BE\AccountMgt.Api\bin\Debug\net8.0\S
 C:\Users\Decagon\Desktop\ISW-AccountMgt-Gp1-BE\AccountMgt.Api\bin\Debug\net8.0\Serilog.Sinks.Console.dll
 C:\Users\Decagon\Desktop\ISW-AccountMgt-Gp1-BE\AccountMgt.Api\bin\Debug\net8.0\Serilog.Sinks.Debug.dll
 C:\Users\Decagon\Desktop\ISW-AccountMgt-Gp1-BE\AccountMgt.Api\bin\Debug\net8.0\Serilog.Sinks.File.dll
+C:\Users\Decagon\Documents\ISW-AccountMgt-Gp1-BE\AccountMgt.Api\bin\Debug\net8.0\Serilog.dll
+C:\Users\Decagon\Documents\ISW-AccountMgt-Gp1-BE\AccountMgt.Api\bin\Debug\net8.0\Serilog.AspNetCore.dll
+C:\Users\Decagon\Documents\ISW-AccountMgt-Gp1-BE\AccountMgt.Api\bin\Debug\net8.0\Serilog.Extensions.Hosting.dll
+C:\Users\Decagon\Documents\ISW-AccountMgt-Gp1-BE\AccountMgt.Api\bin\Debug\net8.0\Serilog.Extensions.Logging.dll
+C:\Users\Decagon\Documents\ISW-AccountMgt-Gp1-BE\AccountMgt.Api\bin\Debug\net8.0\Serilog.Formatting.Compact.dll
+C:\Users\Decagon\Documents\ISW-AccountMgt-Gp1-BE\AccountMgt.Api\bin\Debug\net8.0\Serilog.Settings.Configuration.dll
+C:\Users\Decagon\Documents\ISW-AccountMgt-Gp1-BE\AccountMgt.Api\bin\Debug\net8.0\Serilog.Sinks.Console.dll
+C:\Users\Decagon\Documents\ISW-AccountMgt-Gp1-BE\AccountMgt.Api\bin\Debug\net8.0\Serilog.Sinks.Debug.dll
+C:\Users\Decagon\Documents\ISW-AccountMgt-Gp1-BE\AccountMgt.Api\bin\Debug\net8.0\Serilog.Sinks.File.dll

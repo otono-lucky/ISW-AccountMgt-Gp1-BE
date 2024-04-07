@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 
 namespace AccountMgt.Auth
 {
-    public class TokenGenerator
+    public class TokenGenerator : ITokenGenerator
     {
         private readonly IConfiguration _configuration;
         private readonly UserManager<AppUser> _userManager;
