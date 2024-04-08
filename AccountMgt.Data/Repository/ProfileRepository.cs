@@ -9,5 +9,12 @@ namespace AccountMgt.Data.Repository
 {
     public class ProfileRepository : IProfileRepository
     {
+        private readonly AppDbContext _context;
+        public ProfileRepository(AppDbContext context)
+        {
+            _context = context;
+        }
+
+        
     }
 }
