@@ -5,6 +5,7 @@ using AccountMgt.Model.Entities;
 using AccountMgt.Utility.Email;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Org.BouncyCastle.Asn1.Ocsp;
 using System;
@@ -23,14 +24,16 @@ namespace AccountMgt.Data.Repository
         private readonly ITokenGenerator _tokenGenerator;
         private readonly IEmailService _emailService;
         private readonly IConfiguration _config;
+        private readonly AppDbContext _context;
 
-        public UserRepository(UserManager<AppUser> userManager, SignInManager<AppUser> signInManager, ITokenGenerator tokenGenerator, IEmailService emailService, IConfiguration config)
+        public UserRepository(UserManager<AppUser> userManager, SignInManager<AppUser> signInManager, ITokenGenerator tokenGenerator, IEmailService emailService, IConfiguration config, AppDbContext context)
         {
             _userManager = userManager;
             _signInManager = signInManager;
             _tokenGenerator = tokenGenerator;
             _emailService = emailService;
             _config = config;
+            _context = context;
         }
 
         public async Task<string> RegisterUser(RegisterDto request)
@@ -69,7 +72,7 @@ namespace AccountMgt.Data.Repository
 
         public async Task<string> Login(LoginDto loginDto)
         {
-            var user = await _userManager.FindByEmailAsync(loginDto.Username);
+            var user = await _context.appUsers.FirstOrDefaultAsync(e => e.UserName == loginDto.Username);
             if (user == null)
             {
                 return "User not found";

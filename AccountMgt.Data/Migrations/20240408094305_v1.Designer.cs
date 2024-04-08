@@ -12,7 +12,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace AccountMgt.Data.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20240404221246_v1")]
+    [Migration("20240408094305_v1")]
     partial class v1
     {
         /// <inheritdoc />
@@ -363,6 +363,9 @@ namespace AccountMgt.Data.Migrations
                     b.Property<string>("ImageUrl")
                         .IsRequired()
                         .HasColumnType("text");
+
+                    b.Property<bool>("IsEmailConfirmed")
+                        .HasColumnType("boolean");
 
                     b.Property<string>("LastName")
                         .IsRequired()

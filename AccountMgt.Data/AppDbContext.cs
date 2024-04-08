@@ -17,7 +17,7 @@ namespace AccountMgt.Data
         {
             
         }
-       
+        public virtual DbSet<AppUser> appUsers { get; set; }
         public virtual DbSet<Profile> Profiles { get; set; }
         public virtual DbSet<Transaction> Transactions { get; set; }
 
