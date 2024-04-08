@@ -11,20 +11,20 @@ namespace AccountMgt.Data.Repository
     {
         private readonly AppDbContext _context;
 
-        private readonly ProfileManager<AppProfile> _profileManager;
+        ///private readonly ProfileManager<AppProfile> _profileManager;
 
-        public ProfileRepository(ProfileManager<AppProfile> profileManager, AppDbContext context)
+       /* public ProfileRepository(ProfileManager<AppProfile> profileManager, AppDbContext context)
         {
             _profileManager = profileManager;
             _context = context;
-        }
+        }*/
 
-        public async Task<string> GetAllProfile(GetAllProfileDto request)
+        /*public async Task<string> GetAllProfile(GetAllProfileDto request)
         {
             var profiles = await _profileManager.GetAllProfileAsync(userId);
             if (profiles == null)
             throw new EntityNotFoundException(ids);
             return profiles;
-        }
+        }*/
     }
 }
