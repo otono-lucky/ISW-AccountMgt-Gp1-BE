@@ -8,6 +8,6 @@ namespace AccountMgt.Data.IRepository
 {
     public interface IProfileRepository
     {
-        Task<string> GetAllProfile(GatAllProfileDto request);
+      //  Task<string> GetAllProfile(GatAllProfileDto request);
     }
 }
