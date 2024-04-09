@@ -1,6 +1,5 @@
 ﻿using AccountMgt.Data.IRepository;
 using AccountMgt.Model.DTO;
-using AccountMgt.Model.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
