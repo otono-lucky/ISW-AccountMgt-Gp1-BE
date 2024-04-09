@@ -186,7 +186,32 @@ namespace AccountMgt.Data.Repository
 
             await _emailService.SendForgotPasswordEmailAsync(emailContent);
 
-            return "Password reset link sent to your email";
+            return token;
+        }
+
+        public async Task<string> ResetPassword(string email, string token, string newPassword)
+        {
+            // Find the user by email
+            var user = await _context.appUsers.FirstOrDefaultAsync(x => x.UserName == email);
+
+            if (user == null)
+            {
+                // User not found
+                return "User not found";
+            }
+
+            // Reset the password
+            var resetPasswordResult = await _userManager.ResetPasswordAsync(user, token, newPassword);
+
+            if (resetPasswordResult.Succeeded)
+            {
+                return "Password reset successfully";
+            }
+            else
+            {
+                // Password reset failed
+                return "Failed to reset password";
+            }
         }
 
 
