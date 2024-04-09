@@ -46,5 +46,14 @@ namespace AccountMgt.Core.Services
             }
             return "Something went wrong";
         }
+        public async Task<string> ForgotPassword(string email)
+        {
+            var result = await _userRepository.ForgotPassword(email);
+            if (result != null) 
+            {
+                return result;
+            }
+            return "email not found";
+        }
     }
 }

@@ -31,5 +31,11 @@ namespace AccountMgt.Api.Controllers
         {
             return Ok(await _userServices.ConfirmEmail(username, otp));
         }
+
+        [HttpPost("forgot-password")]
+        public async Task<IActionResult> ForgotPassword(string email)
+        {
+            return Ok(await _userServices.ForgotPassword(email));
+        }
     }
 }

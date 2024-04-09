@@ -79,7 +79,8 @@ namespace AccountMgt.Api
 
             //Registering the Identity
             builder.Services.AddIdentity<AppUser, IdentityRole>()
-                    .AddEntityFrameworkStores<AppDbContext>();
+                    .AddEntityFrameworkStores<AppDbContext>()
+                    .AddDefaultTokenProviders();
 
             //Password configuration
             builder.Services.Configure<IdentityOptions>(options =>

@@ -158,6 +158,38 @@ namespace AccountMgt.Data.Repository
 
         }
 
+
+        public async Task<string> ForgotPassword(string email)
+        {
+            // Find the user by email
+            var user = await _context.appUsers.FirstOrDefaultAsync(x => x.UserName == email);
+
+            if (user == null)
+            {
+                // User not found
+                return "User not found";
+            }
+
+            // Generate a new password reset token
+            var token = await _userManager.GeneratePasswordResetTokenAsync(user);
+
+            // Construct the password reset link with token
+            var resetLink = $"https://yourwebsite.com/resetpassword?email={Uri.EscapeDataString(email)}&token={Uri.EscapeDataString(token)}";
+
+            // You can send an email with the password reset link to the user
+            var emailContent = new EmailDto
+            {
+                To = email,
+                Subject = "Password Reset",
+                Body = $"Please click the following link to reset your password: {resetLink}"
+            };
+
+            await _emailService.SendForgotPasswordEmailAsync(emailContent);
+
+            return "Password reset link sent to your email";
+        }
+
+
         private string GenerateOtp()
         {
             var random = new Random();

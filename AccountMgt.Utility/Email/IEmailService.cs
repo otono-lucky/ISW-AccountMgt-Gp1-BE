@@ -11,5 +11,6 @@ namespace AccountMgt.Utility.Email
     {
         Task SendEmailRegistration(EmailDto request);
         Task SendLockoutNotificationAsync(EmailDto request);
+        Task SendForgotPasswordEmailAsync(EmailDto request);
     }
 }
