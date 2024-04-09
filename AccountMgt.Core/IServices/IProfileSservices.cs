@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AccountMgt.Model.DTO;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,5 +9,6 @@ namespace AccountMgt.Core.IServices
 {
     public interface IProfileSservices
     {
+        Task<IList<GetAllProfileDto>> GetAllProfileByUserId(Guid UserId);
     }
 }
