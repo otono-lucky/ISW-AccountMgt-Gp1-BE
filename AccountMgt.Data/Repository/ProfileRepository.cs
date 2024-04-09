@@ -1,4 +1,5 @@
 ﻿using AccountMgt.Data.IRepository;
+using AccountMgt.Model.DTO;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,21 +11,25 @@ namespace AccountMgt.Data.Repository
     public class ProfileRepository : IProfileRepository
     {
         private readonly AppDbContext _context;
-
-        //private readonly ProfileManager<AppProfile> _profileManager;
-
-       /* public ProfileRepository(ProfileManager<AppProfile> profileManager, AppDbContext context)
+        public ProfileRepository(AppDbContext context)
         {
-            _profileManager = profileManager;
             _context = context;
-        }*/
-
-        /*public async Task<string> GetAllProfile(GetAllProfileDto request)
+        }
+        public async Task<IList<GetAllProfileDto>> GellAllProfileByUserId(Guid userId)
         {
-            var profiles = await _profileManager.GetAllProfileAsync(userId);
-            if (profiles == null)
-            throw new EntityNotFoundException(ids);
-            return profiles;
-        }*/
+            var data = new List<GetAllProfileDto>();
+            foreach(var profile in _context.Profiles.Where(e => e.UserId == userId))
+            {
+                data.Add(new GetAllProfileDto
+                {
+                    UserId = profile.UserId,
+                    Balance = profile.Balance,
+                    BankName = profile.BankName,
+                    BankNumber = profile.BankNumber,
+                    Purpose = profile.Purpose,
+                });
+            }
+            return data;
+        }
     }
 }
