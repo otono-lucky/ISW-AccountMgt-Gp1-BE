@@ -37,6 +37,8 @@ namespace AccountMgt.Data.Repository
             _context = context;
         }
 
+
+
         public async Task<string> RegisterUser(RegisterDto request)
         {
             var appUser = new AppUser
@@ -49,13 +51,14 @@ namespace AccountMgt.Data.Repository
                 City = request.City,
                 State = request.State,
                 Country = request.Country,
+                Otp = GenerateOtp()
             };
             var email = new EmailDto
             {
                 To = request.Email,
                 Subject = "Registration Successful",
                 UserName = request.Email,
-                Otp = GenerateOtp()
+                Otp = appUser.Otp
             };
             var createUser = await _userManager.CreateAsync(appUser, request.Password);
             if(createUser.Succeeded)
@@ -70,6 +73,41 @@ namespace AccountMgt.Data.Repository
             }
             return "Something went wrong, user could not be registered";
         }
+
+        public async Task<string> ConfirmEmail(string username, string otp)
+        {
+            // Retrieve the user by email
+            var user = await _context.appUsers.FirstOrDefaultAsync(o => o.UserName == username);
+
+            if (user == null)
+            {
+                return "User not found";
+            }
+
+            // Check if the OTP matches
+            if (user.Otp != otp)
+            {
+                return "Invalid OTP";
+            }
+
+            // Update user email confirmation status
+            user.EmailConfirmed = true;
+
+            // Update user's OTP to null (assuming OTP should be used only once)
+            user.Otp = null;
+
+            var result = await _userManager.UpdateAsync(user);
+
+            if (result.Succeeded)
+            {
+                return "Email confirmed successfully";
+            }
+            else
+            {
+                return "Failed to confirm email";
+            }
+        }
+
 
         public async Task<string> Login(LoginDto loginDto)
         {

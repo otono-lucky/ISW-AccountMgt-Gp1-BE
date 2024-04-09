@@ -40,6 +40,7 @@ namespace AccountMgt.Data.Migrations
                     State = table.Column<string>(type: "text", nullable: true),
                     Country = table.Column<string>(type: "text", nullable: true),
                     ImageUrl = table.Column<string>(type: "text", nullable: true),
+                    Otp = table.Column<string>(type: "text", nullable: true),
                     UserName = table.Column<string>(type: "character varying(256)", maxLength: 256, nullable: true),
                     NormalizedUserName = table.Column<string>(type: "character varying(256)", maxLength: 256, nullable: true),
                     Email = table.Column<string>(type: "character varying(256)", maxLength: 256, nullable: true),
@@ -174,6 +175,8 @@ namespace AccountMgt.Data.Migrations
                     AccountType = table.Column<int>(type: "integer", nullable: false),
                     Balance = table.Column<decimal>(type: "numeric", nullable: false),
                     Purpose = table.Column<string>(type: "text", nullable: false),
+                    BankName = table.Column<string>(type: "text", nullable: false),
+                    BankNumber = table.Column<string>(type: "text", nullable: false),
                     UserId = table.Column<Guid>(type: "uuid", nullable: false),
                     UserId1 = table.Column<string>(type: "text", nullable: false),
                     CreatedAt = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
@@ -187,29 +190,6 @@ namespace AccountMgt.Data.Migrations
                         name: "FK_Profiles_AspNetUsers_UserId1",
                         column: x => x.UserId1,
                         principalTable: "AspNetUsers",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "Bank",
-                columns: table => new
-                {
-                    Id = table.Column<Guid>(type: "uuid", nullable: false),
-                    BankName = table.Column<string>(type: "text", nullable: false),
-                    BankBalance = table.Column<decimal>(type: "numeric", nullable: false),
-                    ProfileId = table.Column<Guid>(type: "uuid", nullable: false),
-                    CreatedAt = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
-                    UpdatedAt = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
-                    IsDeleted = table.Column<bool>(type: "boolean", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Bank", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_Bank_Profiles_ProfileId",
-                        column: x => x.ProfileId,
-                        principalTable: "Profiles",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
@@ -277,11 +257,6 @@ namespace AccountMgt.Data.Migrations
                 unique: true);
 
             migrationBuilder.CreateIndex(
-                name: "IX_Bank_ProfileId",
-                table: "Bank",
-                column: "ProfileId");
-
-            migrationBuilder.CreateIndex(
                 name: "IX_Profiles_UserId1",
                 table: "Profiles",
                 column: "UserId1");
@@ -309,9 +284,6 @@ namespace AccountMgt.Data.Migrations
 
             migrationBuilder.DropTable(
                 name: "AspNetUserTokens");
-
-            migrationBuilder.DropTable(
-                name: "Bank");
 
             migrationBuilder.DropTable(
                 name: "Transactions");

@@ -12,8 +12,8 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace AccountMgt.Data.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20240408224143_v3")]
-    partial class v3
+    [Migration("20240409145528_otp")]
+    partial class otp
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -340,10 +340,11 @@ namespace AccountMgt.Data.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<bool>("IsEmailConfirmed")
-                        .HasColumnType("boolean");
-
                     b.Property<string>("LastName")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("Otp")
                         .IsRequired()
                         .HasColumnType("text");
 

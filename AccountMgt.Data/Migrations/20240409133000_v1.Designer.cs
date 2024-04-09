@@ -12,7 +12,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace AccountMgt.Data.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20240408094305_v1")]
+    [Migration("20240409133000_v1")]
     partial class v1
     {
         /// <inheritdoc />
@@ -25,38 +25,6 @@ namespace AccountMgt.Data.Migrations
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
 
-            modelBuilder.Entity("AccountMgt.Model.Entities.Bank", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uuid");
-
-                    b.Property<decimal>("BankBalance")
-                        .HasColumnType("numeric");
-
-                    b.Property<string>("BankName")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<DateTime>("CreatedAt")
-                        .HasColumnType("timestamp with time zone");
-
-                    b.Property<bool>("IsDeleted")
-                        .HasColumnType("boolean");
-
-                    b.Property<Guid>("ProfileId")
-                        .HasColumnType("uuid");
-
-                    b.Property<DateTime>("UpdatedAt")
-                        .HasColumnType("timestamp with time zone");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("ProfileId");
-
-                    b.ToTable("Bank");
-                });
-
             modelBuilder.Entity("AccountMgt.Model.Entities.Profile", b =>
                 {
                     b.Property<Guid>("Id")
@@ -68,6 +36,14 @@ namespace AccountMgt.Data.Migrations
 
                     b.Property<decimal>("Balance")
                         .HasColumnType("numeric");
+
+                    b.Property<string>("BankName")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("BankNumber")
+                        .IsRequired()
+                        .HasColumnType("text");
 
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("timestamp with time zone");
@@ -371,22 +347,15 @@ namespace AccountMgt.Data.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
+                    b.Property<string>("Otp")
+                        .IsRequired()
+                        .HasColumnType("text");
+
                     b.Property<string>("State")
                         .IsRequired()
                         .HasColumnType("text");
 
                     b.HasDiscriminator().HasValue("AppUser");
-                });
-
-            modelBuilder.Entity("AccountMgt.Model.Entities.Bank", b =>
-                {
-                    b.HasOne("AccountMgt.Model.Entities.Profile", "Profile")
-                        .WithMany("Banks")
-                        .HasForeignKey("ProfileId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Profile");
                 });
 
             modelBuilder.Entity("AccountMgt.Model.Entities.Profile", b =>
@@ -464,8 +433,6 @@ namespace AccountMgt.Data.Migrations
 
             modelBuilder.Entity("AccountMgt.Model.Entities.Profile", b =>
                 {
-                    b.Navigation("Banks");
-
                     b.Navigation("Transactions");
                 });
 

@@ -27,6 +27,16 @@ namespace AccountMgt.Core.Services
             return "No user added";
         }
 
+        public async Task<string> ConfirmEmail(string username, string otp)
+        {
+            var result = await _userRepository.ConfirmEmail(username, otp);
+            if (result != null)
+            {
+                return result;
+            }
+            return "Could not confirm email";
+        }
+
         public async Task<string> Login(LoginDto loginDto)
         {
             var token = await _userRepository.Login(loginDto);

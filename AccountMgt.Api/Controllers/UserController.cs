@@ -25,5 +25,11 @@ namespace AccountMgt.Api.Controllers
         {
             return Ok(await _userServices.Login(loginDto));
         }
+
+        [HttpPatch("confirm-email")]
+        public async Task<IActionResult> ConfirmEmail(string username, string otp)
+        {
+            return Ok(await _userServices.ConfirmEmail(username, otp));
+        }
     }
 }
