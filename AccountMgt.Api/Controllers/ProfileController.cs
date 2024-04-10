@@ -26,5 +26,11 @@ namespace AccountMgt.Api.Controllers
         {
             return Ok(await _profileServices.UpdateProfileBalance(profileBalance));
         }
+
+        [HttpGet("get-all-profiles-by-userId")]
+        public async Task<ActionResult<IList<GetAllProfileDto>>> GetAllProfileByUserId(Guid userId)
+        {
+            return Ok(await _profileServices.GetAllProfileByUserId(userId));
+        }
     }
 }
