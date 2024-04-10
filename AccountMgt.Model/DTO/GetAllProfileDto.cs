@@ -5,19 +5,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AccountMgt.Model.Entities
+namespace AccountMgt.Model.DTO
 {
-    public class Profile : BaseEntity
+    public class GetAllProfileDto
     {
-        public AccountType AccountType { get; set; }
+        public Guid UserId { get; set; }
         public decimal Balance { get; set; }
         public string Purpose { get; set; }
         public string BankName { get; set; }
         public string BankNumber { get; set; }
-        public Guid UserId { get; set; }
-        public virtual AppUser User { get; set; }
-        public virtual ICollection<Transaction> Transactions { get; set; }
-        
-        
     }
 }

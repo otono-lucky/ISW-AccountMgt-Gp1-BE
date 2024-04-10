@@ -10,6 +10,8 @@ namespace AccountMgt.Core.IServices
     public interface IUserServices
     {
         Task<string> CreateUserService(RegisterDto request);
+        Task<string> ConfirmEmail(string username, string otp);
         Task<string> Login(LoginDto loginDto);
+        Task<string> ForgotPassword(string email);
     }
 }

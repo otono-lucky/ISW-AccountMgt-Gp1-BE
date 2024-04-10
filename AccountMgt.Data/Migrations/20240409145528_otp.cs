@@ -5,7 +5,7 @@
 namespace AccountMgt.Data.Migrations
 {
     /// <inheritdoc />
-    public partial class v2 : Migration
+    public partial class otp : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
