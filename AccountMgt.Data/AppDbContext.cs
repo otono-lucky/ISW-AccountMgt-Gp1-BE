@@ -24,6 +24,9 @@ namespace AccountMgt.Data
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
+
+            builder.Entity<Profile>()
+                .HasQueryFilter(x => !x.IsDeleted);
         }
 
 
