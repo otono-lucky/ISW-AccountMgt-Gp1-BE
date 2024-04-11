@@ -32,5 +32,11 @@ namespace AccountMgt.Api.Controllers
         {
             return Ok(await _profileServices.GetAllProfileByUserId(userId));
         }
+
+        [HttpGet("get-profile-by-id")]
+        public async Task<IActionResult> GetProfileById(Guid Id)
+        {
+            return Ok(await _profileServices.GetProfileById(Id));
+        }
     }
 }

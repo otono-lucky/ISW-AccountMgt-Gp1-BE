@@ -37,5 +37,11 @@ namespace AccountMgt.Api.Controllers
         {
             return Ok(await _userServices.ForgotPassword(email));
         }
+
+        [HttpPost("reset-password")]
+        public async Task<IActionResult> ResetPassword(string email, string token, string newPassword)
+        {
+            return Ok(await _userServices.ResetPassword(email, token, newPassword));
+        }
     }
 }

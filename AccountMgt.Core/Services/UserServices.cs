@@ -55,5 +55,15 @@ namespace AccountMgt.Core.Services
             }
             return "email not found";
         }
+
+        public async Task<string> ResetPassword(string email, string token, string newPassword)
+        {
+            var result = await _userRepository.ResetPassword(email, token, newPassword);
+            if (result != null)
+            {
+                return result;
+            }
+            return "Password cannot be reset at this time";
+        }
     }
 }

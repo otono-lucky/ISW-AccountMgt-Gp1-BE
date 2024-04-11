@@ -1,6 +1,13 @@
 ﻿using AccountMgt.Data.IRepository;
 using AccountMgt.Model.DTO;
 using AccountMgt.Model.Entities;
+using Microsoft.EntityFrameworkCore;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using AccountMgt.Model.Entities;
 using AccountMgt.Model.ResponseModels;
 
 namespace AccountMgt.Data.Repository
@@ -83,6 +90,24 @@ namespace AccountMgt.Data.Repository
                     Purpose = profile.Purpose,
                 });
             }
+            return data;
+        }
+
+        public async Task<Profile> GetProfilebyId(Guid Id)
+        {
+            var profile = await _context.Profiles.FirstOrDefaultAsync(e => e.Id == Id);
+            if (profile == null)
+            {
+                return null;
+            }
+            var data = new Profile
+            {
+                UserId = profile.UserId,
+                Balance = profile.Balance,
+                BankName = profile.BankName,
+                BankNumber = profile.BankNumber,
+                Purpose = profile.Purpose
+            };
             return data;
         }
     }
