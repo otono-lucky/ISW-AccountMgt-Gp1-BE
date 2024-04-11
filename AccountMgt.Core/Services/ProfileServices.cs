@@ -17,6 +17,12 @@ namespace AccountMgt.Core.Services
         {
             _profileRepository = profileRepository;
         }
+
+        public async Task DeleteProfileById(Guid Id)
+        {
+            await _profileRepository.DeleteProfileById(Id);
+        }
+
         public async Task<IList<GetAllProfileDto>> GetAllProfileByUserId(Guid UserId)
         {
             IList<GetAllProfileDto> result = await _profileRepository.GellAllProfileByUserId(UserId);

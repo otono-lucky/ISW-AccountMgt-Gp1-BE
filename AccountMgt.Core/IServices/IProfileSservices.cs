@@ -12,5 +12,6 @@ namespace AccountMgt.Core.IServices
     {
         Task<IList<GetAllProfileDto>> GetAllProfileByUserId(Guid UserId);
         Task<Profile> GetProfileById(Guid Id);
+        Task DeleteProfileById(Guid Id);
     }
 }
