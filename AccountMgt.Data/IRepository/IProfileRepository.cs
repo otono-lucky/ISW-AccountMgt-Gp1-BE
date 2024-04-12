@@ -11,6 +11,7 @@ namespace AccountMgt.Data.IRepository
 {
     public interface IProfileRepository
     {
+        Task DeleteProfileById(Guid id);
         Task<IList<GetAllProfileDto>> GellAllProfileByUserId(Guid userId);
         Task<Profile> GetProfilebyId(Guid Id);
         Task<CreateProfileResponseModel> CreateProfile(ProfileDto profile);

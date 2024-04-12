@@ -17,8 +17,12 @@ namespace AccountMgt.Data.Repository
         private readonly AppDbContext _context;
 
         public ProfileRepository(AppDbContext context)
+        private readonly IGenericRepository<Profile> _profiles;
+        public ProfileRepository(AppDbContext context, IGenericRepository<Profile> profiles)
         {
             _context = context; 
+            _context = context;
+            _profiles = profiles;
         }
 
         public async Task<CreateProfileResponseModel> CreateProfile(ProfileDto profile)
@@ -91,6 +95,12 @@ namespace AccountMgt.Data.Repository
                 });
             }
             return data;
+        }
+
+        public async Task DeleteProfileById(Guid id)
+        {
+            var result = _profiles.BulkUpdate(query: x => x.Id == id, 
+                setProperty: s => s.SetProperty(p => p.IsDeleted, true));
         }
 
         public async Task<Profile> GetProfilebyId(Guid Id)

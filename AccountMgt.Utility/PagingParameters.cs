@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AccountMgt.Utility
 {
-    public class PaginParameter
+    public class PagingParameter
     {
         const int maxPageSize = 50;
         public int PageNumber { get; set; }

@@ -38,5 +38,12 @@ namespace AccountMgt.Api.Controllers
         {
             return Ok(await _profileServices.GetProfileById(Id));
         }
+
+        [HttpPut]
+        public async Task DeleteUserProfileById(Guid id)
+        {
+            await _profileServices.DeleteProfileById(id);
+        }
+
     }
 }
