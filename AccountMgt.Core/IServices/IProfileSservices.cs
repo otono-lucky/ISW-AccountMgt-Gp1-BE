@@ -11,9 +11,9 @@ namespace AccountMgt.Core.IServices
 {
     public interface IProfileSservices
     {
-        Task<IList<GetAllProfileDto>> GetAllProfileByUserId(Guid UserId);
-        Task<Profile> GetProfileById(Guid Id);
-        Task DeleteProfileById(Guid Id);
+        Task<IList<GetAllProfileDto>> GetAllProfileByUserId(string UserId);
+        Task<Profile> GetProfileById(string Id);
+        Task DeleteProfileById(string Id);
         Task<CreateProfileResponseModel> CreateProfile(ProfileDto profile);
         Task<UpdateProfileBalanceResponseModel> UpdateProfileBalance(UpdateProfileBalanceDto profileBalance);
     }

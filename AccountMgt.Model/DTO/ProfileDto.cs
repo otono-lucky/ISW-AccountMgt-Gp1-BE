@@ -11,8 +11,11 @@ namespace AccountMgt.Model.DTO
     {
         public AccountType AccountType { get; set; }
         public decimal Balance { get; set; }
-        public Guid UserId { get; set; }
-        public string Purpose { get; set; } 
+        public string UserId { get; set; }
+        public string Purpose { get; set; }
+        public string BankName { get; set; }
+      
+
     }
 
 }

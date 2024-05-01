@@ -28,19 +28,19 @@ namespace AccountMgt.Api.Controllers
         }
 
         [HttpGet("get-all-profiles-by-userId")]
-        public async Task<ActionResult<IList<GetAllProfileDto>>> GetAllProfileByUserId(Guid userId)
+        public async Task<ActionResult<IList<GetAllProfileDto>>> GetAllProfileByUserId(string userId)
         {
             return Ok(await _profileServices.GetAllProfileByUserId(userId));
         }
 
         [HttpGet("get-profile-by-id")]
-        public async Task<IActionResult> GetProfileById(Guid Id)
+        public async Task<IActionResult> GetProfileById(string Id)
         {
             return Ok(await _profileServices.GetProfileById(Id));
         }
 
         [HttpPut]
-        public async Task DeleteUserProfileById(Guid id)
+        public async Task DeleteUserProfileById(string id)
         {
             await _profileServices.DeleteProfileById(id);
         }

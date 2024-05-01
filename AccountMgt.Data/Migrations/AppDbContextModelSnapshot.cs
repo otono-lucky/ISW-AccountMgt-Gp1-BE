@@ -24,9 +24,9 @@ namespace AccountMgt.Data.Migrations
 
             modelBuilder.Entity("AccountMgt.Model.Entities.Profile", b =>
                 {
-                    b.Property<Guid>("Id")
+                    b.Property<string>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("uuid");
+                        .HasColumnType("text");
 
                     b.Property<int>("AccountType")
                         .HasColumnType("integer");
@@ -39,7 +39,6 @@ namespace AccountMgt.Data.Migrations
                         .HasColumnType("text");
 
                     b.Property<string>("BankNumber")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<DateTime>("CreatedAt")
@@ -55,25 +54,22 @@ namespace AccountMgt.Data.Migrations
                     b.Property<DateTime>("UpdatedAt")
                         .HasColumnType("timestamp with time zone");
 
-                    b.Property<Guid>("UserId")
-                        .HasColumnType("uuid");
-
-                    b.Property<string>("UserId1")
+                    b.Property<string>("UserId")
                         .IsRequired()
                         .HasColumnType("text");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("UserId1");
+                    b.HasIndex("UserId");
 
                     b.ToTable("Profiles");
                 });
 
             modelBuilder.Entity("AccountMgt.Model.Entities.Transaction", b =>
                 {
-                    b.Property<Guid>("Id")
+                    b.Property<string>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("uuid");
+                        .HasColumnType("text");
 
                     b.Property<decimal>("Amount")
                         .HasColumnType("numeric");
@@ -92,9 +88,6 @@ namespace AccountMgt.Data.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<Guid>("ProfileId1")
-                        .HasColumnType("uuid");
-
                     b.Property<DateTime>("TransactionDate")
                         .HasColumnType("timestamp with time zone");
 
@@ -103,7 +96,7 @@ namespace AccountMgt.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("ProfileId1");
+                    b.HasIndex("ProfileId");
 
                     b.ToTable("Transactions");
                 });
@@ -356,7 +349,7 @@ namespace AccountMgt.Data.Migrations
                 {
                     b.HasOne("AccountMgt.Model.Entities.AppUser", "User")
                         .WithMany("Profiles")
-                        .HasForeignKey("UserId1")
+                        .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -367,7 +360,7 @@ namespace AccountMgt.Data.Migrations
                 {
                     b.HasOne("AccountMgt.Model.Entities.Profile", "Profile")
                         .WithMany("Transactions")
-                        .HasForeignKey("ProfileId1")
+                        .HasForeignKey("ProfileId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 

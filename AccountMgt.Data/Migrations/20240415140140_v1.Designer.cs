@@ -12,8 +12,8 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace AccountMgt.Data.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20240409134540_v2")]
-    partial class v2
+    [Migration("20240415140140_v1")]
+    partial class v1
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -42,7 +42,6 @@ namespace AccountMgt.Data.Migrations
                         .HasColumnType("text");
 
                     b.Property<string>("BankNumber")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<DateTime>("CreatedAt")
