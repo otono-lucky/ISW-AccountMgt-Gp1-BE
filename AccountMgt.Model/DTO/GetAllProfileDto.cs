@@ -9,7 +9,7 @@ namespace AccountMgt.Model.DTO
 {
     public class GetAllProfileDto
     {
-        public Guid UserId { get; set; }
+        public string UserId { get; set; }
         public decimal Balance { get; set; }
         public string Purpose { get; set; }
         public string BankName { get; set; }

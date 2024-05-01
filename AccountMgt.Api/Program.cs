@@ -102,6 +102,7 @@ namespace AccountMgt.Api
             builder.Services.AddScoped<ITokenGenerator, TokenGenerator>();
             builder.Services.AddScoped<IProfileRepository, ProfileRepository>();
             builder.Services.AddScoped<IProfileSservices, ProfileServices>();
+            builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
 
 
 

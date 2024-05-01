@@ -16,7 +16,6 @@ namespace AccountMgt.Data.Repository
     {
         private readonly AppDbContext _context;
 
-        public ProfileRepository(AppDbContext context)
         private readonly IGenericRepository<Profile> _profiles;
         public ProfileRepository(AppDbContext context, IGenericRepository<Profile> profiles)
         {
@@ -31,7 +30,9 @@ namespace AccountMgt.Data.Repository
             {
                 AccountType = profile.AccountType,
                 Balance = profile.Balance,
-                UserId = profile.UserId
+                UserId = profile.UserId,
+                Purpose = profile.Purpose,
+                BankName = profile.BankName,
               
             };
 
@@ -47,7 +48,9 @@ namespace AccountMgt.Data.Repository
                 {
                     AccountType = userProfile.AccountType,
                     Balance = userProfile.Balance,
-                    UserId = userProfile.UserId
+                    UserId = userProfile.UserId,
+                    Purpose = userProfile.Purpose,
+                    BankName= userProfile.BankName,
                 }
             };
 
@@ -80,7 +83,7 @@ namespace AccountMgt.Data.Repository
             };
         }
 
-        public async Task<IList<GetAllProfileDto>> GellAllProfileByUserId(Guid userId)
+        public async Task<IList<GetAllProfileDto>> GellAllProfileByUserId(string userId)
         {
             var data = new List<GetAllProfileDto>();
             foreach(var profile in _context.Profiles.Where(e => e.UserId == userId))
@@ -97,13 +100,13 @@ namespace AccountMgt.Data.Repository
             return data;
         }
 
-        public async Task DeleteProfileById(Guid id)
+        public async Task DeleteProfileById(string id)
         {
             var result = _profiles.BulkUpdate(query: x => x.Id == id, 
                 setProperty: s => s.SetProperty(p => p.IsDeleted, true));
         }
 
-        public async Task<Profile> GetProfilebyId(Guid Id)
+        public async Task<Profile> GetProfilebyId(string Id)
         {
             var profile = await _context.Profiles.FirstOrDefaultAsync(e => e.Id == Id);
             if (profile == null)

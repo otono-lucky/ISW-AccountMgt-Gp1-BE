@@ -43,12 +43,12 @@ namespace AccountMgt.Core.Services
         }
        
 
-        public async Task DeleteProfileById(Guid Id)
+        public async Task DeleteProfileById(string Id)
         {
             await _profileRepository.DeleteProfileById(Id);
         }
 
-        public async Task<IList<GetAllProfileDto>> GetAllProfileByUserId(Guid UserId)
+        public async Task<IList<GetAllProfileDto>> GetAllProfileByUserId(string UserId)
         {
             IList<GetAllProfileDto> result = await _profileRepository.GellAllProfileByUserId(UserId);
             if (result != null)
@@ -58,7 +58,7 @@ namespace AccountMgt.Core.Services
             return new List<GetAllProfileDto>();
         }
 
-        public async Task<Profile> GetProfileById(Guid Id)
+        public async Task<Profile> GetProfileById(string Id)
         {
             var profile = await _profileRepository.GetProfilebyId(Id);
             if (profile != null)
