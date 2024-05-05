@@ -43,5 +43,19 @@ namespace AccountMgt.Api.Controllers
         {
             return Ok(await _userServices.ResetPassword(email, token, newPassword));
         }
+
+        [HttpGet("get-all-users")]
+        public async Task<IActionResult> GetAllUsers()
+        {
+            return Ok(await _userServices.GetAllUsers());
+        }
+
+        [HttpGet("get-user/{id}")]
+        public async Task<IActionResult> GetUserById(int id)
+        {
+            return Ok(await _userServices.GetUserById(id));
+        }
+
     }
+
 }

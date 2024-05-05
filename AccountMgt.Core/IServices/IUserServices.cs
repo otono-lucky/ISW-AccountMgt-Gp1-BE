@@ -14,5 +14,7 @@ namespace AccountMgt.Core.IServices
         Task<string> Login(LoginDto loginDto);
         Task<string> ForgotPassword(string email);
         Task<string> ResetPassword(string email, string token, string newPassword);
+        Task<IEnumerable<UserDto>> GetAllUsers();
+        Task<UserDto> GetUserById(int id);
     }
 }

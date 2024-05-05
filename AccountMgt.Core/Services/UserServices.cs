@@ -19,7 +19,7 @@ namespace AccountMgt.Core.Services
 
         public async Task<string> CreateUserService(RegisterDto request)
         {
-           var newUser =  await _userRepository.RegisterUser(request);
+            var newUser = await _userRepository.RegisterUser(request);
             if (newUser != null)
             {
                 return "User added successfully";
@@ -49,7 +49,7 @@ namespace AccountMgt.Core.Services
         public async Task<string> ForgotPassword(string email)
         {
             var result = await _userRepository.ForgotPassword(email);
-            if (result != null) 
+            if (result != null)
             {
                 return result;
             }
@@ -65,5 +65,37 @@ namespace AccountMgt.Core.Services
             }
             return "Password cannot be reset at this time";
         }
+
+        
+        public async Task<IEnumerable<UserDto>> GetAllUsers()
+        {
+            var users = await _userRepository.GetAllUsers();
+            var userDtos = users.Select(user => new UserDto
+            {
+                Id = user.Id,
+                FirstName = user.FirstName,
+                LastName = user.LastName,
+                Email = user.Email,
+            });
+            return userDtos;
+        }
+        public async Task<UserDto> GetUserById(int id)
+        {
+            var user = await _userRepository.GetUserById(id);
+            if (user != null)
+            {
+                var userDto = new UserDto
+                {
+                    Id = user.Id,
+                    FirstName = user.FirstName,
+                    LastName = user.LastName,
+                    Email = user.Email,
+                };
+                return userDto;
+            }
+            return null; 
+        }
     }
 }
+    
+

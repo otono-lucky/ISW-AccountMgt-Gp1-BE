@@ -221,5 +221,36 @@ namespace AccountMgt.Data.Repository
             var otp = random.Next(1000, 9999).ToString();
             return otp;
         }
+
+        public async Task<IEnumerable<UserDto>> GetAllUsers()
+        {
+            var users = await _context.appUsers.ToListAsync();
+            return users.Select(user => new UserDto
+            {
+                FirstName = user.FirstName,
+                LastName = user.LastName,
+                Email = user.Email,
+            });
+        }
+
+        public async Task<UserDto> GetUserById(int id)
+        {
+            var user = await _context.appUsers.FindAsync(id);
+            if (user != null)
+            {
+                return new UserDto
+                {
+                    FirstName = user.FirstName,
+                    LastName = user.LastName,
+                    Email = user.Email,
+                    
+                };
+            }
+            return null;
+        }
+
     }
 }
+
+    
+
