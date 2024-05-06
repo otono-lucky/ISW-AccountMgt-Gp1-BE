@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  accountmgt.api:
+    image: ${DOCKER_REGISTRY-}accountmgtapi
+    build:
+      context: .
+      dockerfile: AccountMgt.Api\Dockerfile
