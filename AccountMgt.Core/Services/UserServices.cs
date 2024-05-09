@@ -1,6 +1,7 @@
 ﻿using AccountMgt.Core.IServices;
 using AccountMgt.Data.IRepository;
 using AccountMgt.Model.DTO;
+using AccountMgt.Model.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -64,6 +65,26 @@ namespace AccountMgt.Core.Services
                 return result;
             }
             return "Password cannot be reset at this time";
+        }
+
+        public async Task<string> ChangePassword(ChangePasswordDTO model)
+        {
+            var result = await _userRepository.ChangePassword(model);
+            if (result != null)
+            {
+                return result;
+            }
+            return "There was a problem changing passwords";
+        }
+
+        public async Task<object> GetUserById(string id)
+        {
+            var result =  await _userRepository.GetUserById(id);
+            if (result != null)
+            {
+                return result;
+            }
+            return new RegisterDto();
         }
     }
 }

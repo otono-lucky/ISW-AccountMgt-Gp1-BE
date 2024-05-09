@@ -170,14 +170,13 @@ namespace AccountMgt.Data.Migrations
                 name: "Profiles",
                 columns: table => new
                 {
-                    Id = table.Column<Guid>(type: "uuid", nullable: false),
+                    Id = table.Column<string>(type: "text", nullable: false),
                     AccountType = table.Column<int>(type: "integer", nullable: false),
                     Balance = table.Column<decimal>(type: "numeric", nullable: false),
                     Purpose = table.Column<string>(type: "text", nullable: false),
                     BankName = table.Column<string>(type: "text", nullable: false),
                     BankNumber = table.Column<string>(type: "text", nullable: true),
-                    UserId = table.Column<Guid>(type: "uuid", nullable: false),
-                    UserId1 = table.Column<string>(type: "text", nullable: false),
+                    UserId = table.Column<string>(type: "text", nullable: false),
                     CreatedAt = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
                     UpdatedAt = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
                     IsDeleted = table.Column<bool>(type: "boolean", nullable: false)
@@ -186,8 +185,8 @@ namespace AccountMgt.Data.Migrations
                 {
                     table.PrimaryKey("PK_Profiles", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Profiles_AspNetUsers_UserId1",
-                        column: x => x.UserId1,
+                        name: "FK_Profiles_AspNetUsers_UserId",
+                        column: x => x.UserId,
                         principalTable: "AspNetUsers",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
@@ -197,12 +196,11 @@ namespace AccountMgt.Data.Migrations
                 name: "Transactions",
                 columns: table => new
                 {
-                    Id = table.Column<Guid>(type: "uuid", nullable: false),
+                    Id = table.Column<string>(type: "text", nullable: false),
                     Amount = table.Column<decimal>(type: "numeric", nullable: false),
                     TransactionDate = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
                     Description = table.Column<string>(type: "text", nullable: false),
                     ProfileId = table.Column<string>(type: "text", nullable: false),
-                    ProfileId1 = table.Column<Guid>(type: "uuid", nullable: false),
                     CreatedAt = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
                     UpdatedAt = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
                     IsDeleted = table.Column<bool>(type: "boolean", nullable: false)
@@ -211,8 +209,8 @@ namespace AccountMgt.Data.Migrations
                 {
                     table.PrimaryKey("PK_Transactions", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Transactions_Profiles_ProfileId1",
-                        column: x => x.ProfileId1,
+                        name: "FK_Transactions_Profiles_ProfileId",
+                        column: x => x.ProfileId,
                         principalTable: "Profiles",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
@@ -256,14 +254,14 @@ namespace AccountMgt.Data.Migrations
                 unique: true);
 
             migrationBuilder.CreateIndex(
-                name: "IX_Profiles_UserId1",
+                name: "IX_Profiles_UserId",
                 table: "Profiles",
-                column: "UserId1");
+                column: "UserId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Transactions_ProfileId1",
+                name: "IX_Transactions_ProfileId",
                 table: "Transactions",
-                column: "ProfileId1");
+                column: "ProfileId");
         }
 
         /// <inheritdoc />

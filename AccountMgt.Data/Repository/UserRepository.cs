@@ -11,6 +11,7 @@ using Org.BouncyCastle.Asn1.Ocsp;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
 using static Org.BouncyCastle.Math.EC.ECCurve;
@@ -212,6 +213,52 @@ namespace AccountMgt.Data.Repository
                 // Password reset failed
                 return "Failed to reset password";
             }
+        }
+
+        public async Task<string> ChangePassword(ChangePasswordDTO model)
+        {
+            var userId = model.UserId;
+            var user = await _userManager.FindByIdAsync(userId);
+
+            if (user == null)
+            {
+                return "User not found.";
+            }
+
+            var result = await _userManager.ChangePasswordAsync(user, model.OldPassword, model.NewPassword);
+
+            if (result.Succeeded)
+            {
+                return "Password changed successfully.";
+            }
+            else
+            {
+                return string.Join(", ", result.Errors);
+            }
+        }
+
+        public async Task<object> GetUserById(string id)
+        {
+            var user = await _context.appUsers.FindAsync(id);
+
+            if (user == null)
+            {
+                return null;
+            }
+
+            var data = new AppUser
+            {
+                FirstName = user.FirstName,
+                LastName = user.LastName,
+                Email = user.Email,
+                PhoneNumber = user.PhoneNumber,
+                State = user.State,
+                City = user.City,
+                Address = user.Address,
+                Country = user.Country,
+            };
+
+            return data;
         }
 
 
