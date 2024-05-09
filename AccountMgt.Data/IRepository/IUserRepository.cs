@@ -1,4 +1,5 @@
 ﻿using AccountMgt.Model.DTO;
+using AccountMgt.Model.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,5 +15,7 @@ namespace AccountMgt.Data.IRepository
         Task<string> Login(LoginDto loginDto);
         Task<string> ForgotPassword(string email);
         Task<string> ResetPassword(string email, string token, string newPassword);
+        Task<string> ChangePassword(ChangePasswordDTO model);
+        Task<object> GetUserById(string id);
     }
 }

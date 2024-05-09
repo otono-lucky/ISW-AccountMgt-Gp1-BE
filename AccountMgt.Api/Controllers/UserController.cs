@@ -43,5 +43,17 @@ namespace AccountMgt.Api.Controllers
         {
             return Ok(await _userServices.ResetPassword(email, token, newPassword));
         }
+
+        [HttpPatch("change-password")]
+        public async Task<IActionResult> ChangePassword(ChangePasswordDTO model)
+        {
+            return Ok(await _userServices.ChangePassword(model));
+        }
+
+        [HttpGet("get-user-by-id")]
+        public async Task<IActionResult> GetUserById(string id)
+        {
+            return Ok(_userServices.GetUserById(id));
+        }
     }
 }
