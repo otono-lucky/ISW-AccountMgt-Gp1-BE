@@ -1,5 +1,6 @@
 
 using AccountMgt.Api.Configuration;
+using AccountMgt.Api.Extension;
 using AccountMgt.Auth;
 using AccountMgt.Core.IServices;
 using AccountMgt.Core.Services;
@@ -26,6 +27,8 @@ namespace AccountMgt.Api
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
+            var env = builder.Environment;
+            var config = builder.Configuration;
 
             // Add services to the container.
 
@@ -95,6 +98,9 @@ namespace AccountMgt.Api
             {
                 options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection"));
             });
+
+
+            builder.Services.AddDbContextAndConfigurations(env, config);
 
             builder.Services.AddScoped<IEmailService, EmailService>();
             builder.Services.AddScoped<IUserRepository, UserRepository>();
