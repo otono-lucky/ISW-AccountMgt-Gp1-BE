@@ -129,13 +129,16 @@ namespace AccountMgt.Api
             // Configure the HTTP request pipeline.
             if (app.Environment.IsDevelopment())
             {
+                app.UseDeveloperExceptionPage();
                 app.UseSwagger();
                 app.UseSwaggerUI();
             }
 
             app.UseHttpsRedirection();
+            app.UseCors("AllowAllOrigins");
 
             app.UseAuthorization();
+            app.UseRouting();
 
             // Get the service scope and obtain the necessary services
             using var scope = app.Services.CreateScope();
