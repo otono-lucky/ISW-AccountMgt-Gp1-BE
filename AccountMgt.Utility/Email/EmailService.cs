@@ -25,17 +25,17 @@ namespace AccountMgt.Utility.Email
 
         public async Task SendEmailRegistration(EmailDto request)
         {
-            string body = PopulateRegisterEmail(request.UserName, request.Otp);
+            //string body = PopulateRegisterEmail(request.UserName, request.Otp);
             var email = new MimeMessage();
 
             email.From.Add(MailboxAddress.Parse(_config["EmailSettings:SmtpUsername"]));
             email.To.Add(MailboxAddress.Parse(request.To));
             email.Subject = request.Subject;
-            /*email.Body = new TextPart(TextFormat.Html) { Text = request.Body };*/
-            var builder = new BodyBuilder();
+            email.Body = new TextPart(TextFormat.Html) { Text = request.Body };
+            /*var builder = new BodyBuilder();
             builder.HtmlBody = body;
 
-            email.Body = builder.ToMessageBody();
+            email.Body = builder.ToMessageBody();*/
 
             using var smtp = new SmtpClient();
 

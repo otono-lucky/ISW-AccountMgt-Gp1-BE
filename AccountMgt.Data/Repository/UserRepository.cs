@@ -59,7 +59,8 @@ namespace AccountMgt.Data.Repository
                 To = request.Email,
                 Subject = "Registration Successful",
                 UserName = request.Email,
-                Otp = appUser.Otp
+                Otp = appUser.Otp,
+                Body = $"Thank you for Registring, kindly verify your email with this otp: {appUser.Otp}"
             };
             var createUser = await _userManager.CreateAsync(appUser, request.Password);
             if(createUser.Succeeded)
@@ -67,7 +68,7 @@ namespace AccountMgt.Data.Repository
                 var roleResult = await _userManager.AddToRoleAsync(appUser, "User");
                 if(roleResult.Succeeded)
                 {
-                    await _emailService.SendEmailRegistration(email);
+                    //await _emailService.SendEmailRegistration(email);
                     return "User registered successful";
                 }
                 
