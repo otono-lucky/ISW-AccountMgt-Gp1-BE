@@ -49,7 +49,8 @@ namespace AccountMgt.Utility.Email
         private string PopulateRegisterEmail(string UserName, string Otp)
         {
             string body = string.Empty;
-            string filePath = "/AccountMgt.Api/Templates/RegistrationTemplate.html";
+            string rootPath = AppDomain.CurrentDomain.BaseDirectory;
+            string filePath = Path.Combine(rootPath, "Templates", "RegistrationTemplate.html");
 
             using (StreamReader reader = new StreamReader(filePath))
             {
