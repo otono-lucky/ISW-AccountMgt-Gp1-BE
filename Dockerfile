@@ -25,6 +25,6 @@ ARG BUILD_CONFIGURATION=Release
 RUN dotnet publish "./AccountMgt.Api.csproj" -c $BUILD_CONFIGURATION -o /app/publish /p:UseAppHost=false
 
 FROM base AS final
-WORKDIR "/src/AccountMgt.Api"
+WORKDIR "AccountMgt.Api"
 COPY --from=publish /app/publish .
 ENTRYPOINT ["dotnet", "AccountMgt.Api.dll"]
