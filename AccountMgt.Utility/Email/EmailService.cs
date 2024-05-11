@@ -49,7 +49,7 @@ namespace AccountMgt.Utility.Email
         private string PopulateRegisterEmail(string UserName, string Otp)
         {
             string body = string.Empty;
-            string filePath = "/app/Templates/RegistrationTemplate.html";
+            string filePath = "/src/AccountMgt.Api/Templates/RegistrationTemplate.html";
 
             using (StreamReader reader = new StreamReader(filePath))
             {
