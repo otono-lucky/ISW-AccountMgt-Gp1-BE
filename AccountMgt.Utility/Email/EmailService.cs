@@ -97,7 +97,7 @@ namespace AccountMgt.Utility.Email
 
         public async Task SendForgotPasswordEmailAsync(EmailDto request)
         {
-            string body = PopulateRegisterEmail(request.UserName, request.Otp);
+           // string body = PopulateRegisterEmail(request.UserName, request.Otp);
             var email = new MimeMessage();
 
             email.From.Add(MailboxAddress.Parse(_config["EmailSettings:SmtpUsername"]));
