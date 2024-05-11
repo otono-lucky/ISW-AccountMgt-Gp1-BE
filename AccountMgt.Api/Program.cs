@@ -126,19 +126,16 @@ namespace AccountMgt.Api
             var app = builder.Build();
             app.UseCors("AllowAllOrigins");
 
-            // Configure the HTTP request pipeline.
-            if (app.Environment.IsDevelopment())
-            {
-                app.UseDeveloperExceptionPage();
-                app.UseSwagger();
-                app.UseSwaggerUI();
-            }
-
-            app.UseHttpsRedirection();
-            app.UseCors("AllowAllOrigins");
+            app.UseRouting();
 
             app.UseAuthorization();
-            app.UseRouting();
+
+            app.UseSwagger();
+            app.UseSwaggerUI();
+            app.UseDeveloperExceptionPage();
+            
+
+            app.UseAuthorization();
 
             // Get the service scope and obtain the necessary services
             using var scope = app.Services.CreateScope();
@@ -148,6 +145,10 @@ namespace AccountMgt.Api
             var roleManager = serviceProvider.GetRequiredService<RoleManager<IdentityRole>>();
 
             Seeder.SeedData(context, userManager, roleManager).Wait();
+
+            app.UseHttpsRedirection();
+
+            app.UseAuthorization();
 
             app.UseCors("AllowAllOrigins");
 
