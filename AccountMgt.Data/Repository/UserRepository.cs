@@ -68,7 +68,7 @@ namespace AccountMgt.Data.Repository
                 var roleResult = await _userManager.AddToRoleAsync(appUser, "User");
                 if(roleResult.Succeeded)
                 {
-                    //await _emailService.SendEmailRegistration(email);
+                    await _emailService.SendEmailRegistration(email);
                     return "User registered successful";
                 }
                 
