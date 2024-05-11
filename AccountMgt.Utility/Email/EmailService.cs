@@ -50,8 +50,7 @@ namespace AccountMgt.Utility.Email
         {
             string body = string.Empty;
             string rootPath = AppDomain.CurrentDomain.BaseDirectory;
-            string filePath = Path.Combine(rootPath, "Templates", "RegistrationTemplate.html");
-
+            string filePath = Path.Combine(rootPath, "..", "..", "Templates", "RegistrationTemplate.html");
             using (StreamReader reader = new StreamReader(filePath))
             {
                 body = reader.ReadToEnd();
