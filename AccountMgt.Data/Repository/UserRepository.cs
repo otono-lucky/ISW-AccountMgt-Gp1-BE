@@ -46,12 +46,7 @@ namespace AccountMgt.Data.Repository
             {
                 FirstName = request.FirstName,
                 LastName = request.LastName,
-                Email = request.Email,
-                PhoneNumber = request.PhoneNumber,
                 UserName = request.Email,
-                City = request.City,
-                State = request.State,
-                Country = request.Country,
                 Otp = GenerateOtp()
             };
             var email = new EmailDto
