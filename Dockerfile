@@ -17,7 +17,7 @@ COPY ["AccountMgt.Data/AccountMgt.Data.csproj", "AccountMgt.Data/"]
 COPY ["AccountMgt.Utility/AccountMgt.Utility.csproj", "AccountMgt.Utility/"]
 RUN dotnet restore "./AccountMgt.Api/./AccountMgt.Api.csproj"
 COPY . .
-WORKDIR "/src/AccountMgt.Api"
+WORKDIR "AccountMgt.Api"
 RUN dotnet build "./AccountMgt.Api.csproj" -c $BUILD_CONFIGURATION -o /app/build
 
 FROM build AS publish
