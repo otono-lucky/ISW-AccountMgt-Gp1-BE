@@ -2,7 +2,7 @@
 
 FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
 USER app
-WORKDIR "AccountMgt.Api"
+WORKDIR ""
 EXPOSE 8080
 EXPOSE 8081
 
@@ -17,7 +17,7 @@ COPY ["AccountMgt.Data/AccountMgt.Data.csproj", "AccountMgt.Data/"]
 COPY ["AccountMgt.Utility/AccountMgt.Utility.csproj", "AccountMgt.Utility/"]
 RUN dotnet restore "./AccountMgt.Api/./AccountMgt.Api.csproj"
 COPY . .
-WORKDIR "AccountMgt.Api"
+WORKDIR ""
 RUN dotnet build "./AccountMgt.Api.csproj" -c $BUILD_CONFIGURATION -o /app/build
 
 FROM build AS publish
