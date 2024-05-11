@@ -116,7 +116,7 @@ namespace AccountMgt.Api
             {
                 options.AddPolicy("AllowAllOrigins", builder =>
                 {
-                    builder.WithOrigins("https://book-kepper-app.vercel.app/")
+                    builder.WithOrigins("https://book-kepper-app.vercel.app/", "http://localhost:5173")
                         .AllowAnyHeader()
                         .AllowAnyMethod()
                         .AllowCredentials();
